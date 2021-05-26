@@ -1,0 +1,56 @@
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .container {
+    position: relative;
+    text-align: center;
+    color: rgba(250, 248, 248, 0.993);
+  }
+  h1 { font-size: 40px; font-weight: bold; font-family:"Times New Roman", Times, serif;}
+  h2 {
+    border-left: 6px solid rgb(14, 13, 13);
+    background-color: lightgrey;
+  }
+  .right {
+    float: right;
+   
+   }
+   .left {
+    float: left;
+   
+   }
+   footer{
+    position: fixed;
+    width: 100%;
+    background-color:#101010;
+    color:#9d9d9d;
+    font-size:14px;
+    font-weight:bold;
+    padding:10px;    
+    bottom:0;
+  }
+  .footer { 
+    position: absolute; 
+    bottom:0; 
+    right:0;
+    left:0;
+  }
+  .row {
+    display: flex;
+  }
+  
+  /* Create three equal columns that sits next to each other */
+  .column {
+    flex: 33.33%;
+    padding: 5px;
+  }
+
+
+
+
+
+  

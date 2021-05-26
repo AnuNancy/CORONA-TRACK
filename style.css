@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.header
+{
+    height:100vh;
+}
+
+
+.navbar-style
+{
+    box-shadow: 0 5px 10px #f0ebeb;
+    text-transform: uppercase;  /*for changing text in uppercase*/
+    position:fixed;
+}
+.logo{
+    height: 48px;
+    padding: 2px 10px;
+}
+.icon-bar
+{
+    background: rgb(26, 167, 5);
+}
+li a{
+    color: black;
+}
+/* .big-text
+{
+    font-size: 52px;
+    margin:20 px 0;
+    color:  rgb(26, 167, 5);
+} */
+a.btn
+{
+    margin: 30px 10px;
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+}
+a.btn-first
+{
+    background-color: rgb(10, 10, 10);
+    color: #fff;
+}
+a.btn-second
+{
+    /* background: transparent; */
+    background-color: rgb(13, 21, 138);
+    /*border: 1px solid  rgb(33, 64, 202);*/
+    color: rgb(253, 249, 249);
+}
+a.btn:hover{
+    background:  rgb(48, 48, 58);
+    border: none;
+    color: #fff;
+    box-shadow: 5px 5px 10px #999;
+    transition: 0.3s;
+}
+.banner-info, .banner-image
+{
+    margin: 30px 0;
+}
+footer{
+    position: fixed;
+    width: 100%;
+    background-color:#101010;
+    color:#9d9d9d;
+    font-size:14px;
+    font-weight:bold;
+    padding:10px;    
+    bottom:0;
+  }
+  a.ex1:hover, a.ex1:active {color: rgb(230, 23, 8);}
+a.ex2:hover, a.ex2:active {font-size: 250%;}
+/* .h1text {
+	color:rgb(3, 3, 3);
+} */
+.big-text
+{
+    font-size: 52px;
+    margin:20 px 0;
+    color:  rgb(51, 175, 13);
+}

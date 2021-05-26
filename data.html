@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>JSON data</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"/>
+    <script src= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- Latest compiled and minified CSS -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        h1 { color: #FF0000; }
+        h5 { color: #28e16c; }
+        h4 { color: #754bbd; }
+
+        footer{
+            position: fixed;
+    width: 100%;
+  background-color:#101010;
+  color:#fcf8f8;
+  font-size:14px;
+  font-weight:bold;
+  padding:10px;    
+  bottom:0;
+}
+.footer { 
+  position: absolute; 
+  bottom:0; 
+  right:0;
+  left:0;
+}
+      </style>
+
+    </head>
+    <body>
+
+
+        <header class="header">
+            
+            <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+            <div class container="navbar-header"> <!--adding some own features in navigation bar-->
+               
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#micon">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                
+                
+            
+        </div>
+        <div class="collapse navbar-collapse" id="micon">
+            <ul  class ="nav navbar-nav navbar-right" >
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="origin.html">CAUSE</a></li>
+                <li><a href="safety.html">PREVENTION</a></li>
+                <li><a href="protection.html">VACCINE</a></li>
+                <li><a href="diet.html">HEALTHY DIET</a></li>
+                <!-- <li><a href="data.html">CASES</a></li> -->
+                <li><a href="bed.html">CORONA-BEDS</a></li>
+                <li><a href="vaccination.html">VACCINATION-RECORD</a></li>
+                    <li><a href="map.html">MAP</a></li>
+            </ul>
+
+           
+
+
+        </div>
+        </div> 
+        </nav>
+
+        <br><br>
+        <div class="container-fluid bg-light p-5 text-center my-3">
+            <h1> Covid -19 Tracker</h1>
+            <h3 class="text-muted"> A project to keep track of all COVID-19 cases around the world.</h5>
+            </div> 
+            
+
+            <div class="container bg-light p-3 my-3 text-center">
+                <h5 >"Prevention is better than cure."</h5>
+                <h4 >Stay indoor stay safe.</h4>
+                </div>
+
+                <div class="container-fluid"> 
+        <div class="container">
+            <div class="table-responsive">
+                
+                <br>
+
+                <table class="table table-bordered table-striped" id="corona_table">
+                    <thead bgcolor="lightblue">
+                    <tr>
+                        <th>country</th>
+                        <th>cases</th>
+                        <th>deaths</th>
+                        <th>recovered</th>
+                    </tr>
+                    </thead>
+                </table>
+            </div>
+        </div>
+        </div>
+
+
+        <footer class=".footer" >
+            <div class="container">
+            <center>
+            
+                <p>Copyright &copy #Covid19 / #Covid-19 / #Coronavirus. All Rights Reserved. | Contact Us: +91 8340786063</p>
+                <p>This website is developed by Anuradha Kumari.</p>
+            </center>
+            </div>
+          </footer>
+
+    </body>
+</html>
+<script>
+    $(document).ready(function(){
+        $.getJSON("https://coronavirus-19-api.herokuapp.com/countries", function(data){
+           var corona_data= '';
+           $.each(data, function(key, value){
+               corona_data += '<tr>';
+               corona_data += '<td>' + value.country+'</td>';
+               corona_data += '<td>' + value.cases+'</td>';
+               corona_data += '<td>' + value.deaths+'</td>';
+               corona_data += '<td>' + value.recovered+'</td>';
+               corona_data += '</tr>';
+           });
+           $('#corona_table').append(corona_data);
+        });
+    });
+</script>
